@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app  # Syncs your local directory with /app in the container
+      - /app/node_modules  # Ensure node_modules are not overridden by the local volume
+    environment:
+      - NODE_ENV=development
+    command: npm run dev  # Ensure the container runs your development command

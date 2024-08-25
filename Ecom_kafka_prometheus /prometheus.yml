@@ -1,0 +1,9 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'express_app'
+    static_configs:
+      - targets: ['localhost:5000']  # Replace with your Express server address
+/usr/local/opt/grafana/bin/grafana-cli --config /usr/local/etc/grafana/grafana.ini --homepath /usr/local/opt/grafana/share/grafana admin reset-admin-password admin
+zsh: no such file or directory: /usr/local/opt/grafana/bin/grafana-cli
